@@ -54,7 +54,8 @@ Example for downloading digital elevation model (DEM) of Tartu with 5 m resoluti
     import pandas as pd
     import getelbdem
 
-    data = pd.read_csv(conf.sitesfn, sep=',')
+    # CSV file with data including columns X, Y with coordinates
+    data = pd.read_csv("mypoints.csv", sep=',')
     data = data.dropna(subset=['X', 'Y'])
 
     z = data['X'].astype(float)
@@ -71,7 +72,7 @@ Example for downloading digital elevation model (DEM) of Tartu with 5 m resoluti
 LICENSE
 -------
 
-
+This is licensed under the LGPLv3 license. Refer to the license file for more details.
 
 
 
